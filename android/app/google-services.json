@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "294395893340",
+    "project_id": "neus-app-4c7a6",
+    "storage_bucket": "neus-app-4c7a6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:294395893340:android:dfbc6fbcc57435b053f899",
+        "android_client_info": {
+          "package_name": "com.newsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "294395893340-ncudti63d5qj1hp45qkjvseea2qmv1f0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAocNv99UrCOVFj0v69cPNoQZ_Z3afrBr4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "294395893340-ncudti63d5qj1hp45qkjvseea2qmv1f0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
