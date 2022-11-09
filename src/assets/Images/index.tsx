@@ -11,6 +11,22 @@ export default {
     Verify: require('../../assets/Images/verify.png'),
     Logo: require('../../assets/Images/logo.png'),
     Bottom: require('../../assets/Images/blayer.png'),
+    Slide1: require('../../assets/Images/slide1.png'),
+    Slide2: require('../../assets/Images/slide2.png'),
+    RightLine: require('../../assets/Images/rightline.png'),
+    Circle: require('../../assets/Images/circle.png'),
+    LogoOne: require('../../assets/Images/logo1.png'),
+    BottomL: require('../../assets/Images/bottomlogin.png'),
+    Mail: require('../../assets/Images/mail.png'),
+    Fb: require('../../assets/Images/facebook.png'),
+    Apple: require('../../assets/Images/apple.png'),
+
+
+
+
+
+
+
 
 
 

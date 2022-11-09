@@ -20,7 +20,7 @@ const SplashScreen: FC = () => {
 
     useEffect(() => {
         setTimeout(() => {
-          navigation.navigate('HomeScreen');
+          navigation.navigate('onBoardingScreen');
         }, 3500);
       }, []);
     return (

@@ -36,7 +36,7 @@ const Todayride =[
     id:2,
     name:'Devon Lane',
     rides:'7',
-    from:'Palava City by lodha',
+    from:'Palava City by lodha',          
     to:'Peninsula Business Park',
     price:'120',
     ftime:'06:00 AM',
@@ -66,7 +66,7 @@ const HomeScreen: FC = () => {
             <Image source={Images.Red} style={styles.img}/>
             <Text numberOfLines={1} style={styles.texta}>{to}</Text>
 
-            <TouchableOpacity>
+            <TouchableOpacity>    
             <Image source={Images.Edit} style={styles.img}/>
             </TouchableOpacity>
 
