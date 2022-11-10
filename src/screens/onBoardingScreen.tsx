@@ -62,7 +62,7 @@ const onBoardingScreen: FC = () => {
             return (
                 <LinearGradient colors={['#e5d5b8', '#d4e4f0']} start={{ x: -1, y: 0 }}
                     end={{ x: 1, y: 0 }} locations={[0.0, 1.0]} style={styles.container}>
-                    <TouchableOpacity onPress={() => navigation.navigate('Login')} style={{position:'absolute',alignSelf:'flex-end',right: 25,zIndex:5}}>
+                    <TouchableOpacity onPress={() => navigation.navigate('LoginStack')} style={{position:'absolute',alignSelf:'flex-end',right: 25,zIndex:5}}>
                         <Text style={styles.skip}>Skip</Text>
                     </TouchableOpacity>
 
@@ -130,7 +130,7 @@ const onBoardingScreen: FC = () => {
             return (
                 <LinearGradient colors={['#e5d5b8', '#d4e4f0']} start={{ x: -1, y: 0 }}
                     end={{ x: 1, y: 0 }} locations={[0.0, 1.0]} style={styles.container}>
-                    <TouchableOpacity onPress={() => navigation.navigate('Login')} style={{position:'absolute',alignSelf:'flex-end',right: 25,zIndex:5}}>
+                    <TouchableOpacity onPress={() => navigation.navigate('LoginStack')} style={{position:'absolute',alignSelf:'flex-end',right: 25,zIndex:5}}>
                         <Text style={styles.skip}>Skip</Text>
                     </TouchableOpacity>                  
                       <View >
@@ -192,7 +192,7 @@ const onBoardingScreen: FC = () => {
             return (
                 <LinearGradient colors={['#e5d5b8', '#d4e4f0']} start={{ x: -1, y: 0 }}
                     end={{ x: 1, y: 0 }} locations={[0.0, 1.0]} style={styles.container}>
-                    <TouchableOpacity onPress={() => navigation.navigate('Login')} style={{position:'absolute',alignSelf:'flex-end',right: 25,zIndex:5}}>
+                    <TouchableOpacity onPress={() => navigation.navigate('LoginStack')} style={{position:'absolute',alignSelf:'flex-end',right: 25,zIndex:5}}>
                         <Text style={styles.skip}>Skip</Text>
                     </TouchableOpacity>    
                     <View >
@@ -219,7 +219,7 @@ const onBoardingScreen: FC = () => {
                                 <View style={styles.backnew} />
 
                                 :
-                                <View style={styles.back} />
+                                <View style={styles.back} />  
                             }
 
                             {state === '2' ?
@@ -230,7 +230,7 @@ const onBoardingScreen: FC = () => {
                             }
 
                         </View>
-                        <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+                        <TouchableOpacity onPress={() => navigation.navigate('LoginStack')}>
                         <Image source={Images.Circle} style={styles.circle}/>  
                         </TouchableOpacity>    
                     </View>

@@ -3,7 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from '../screens/HomeScreen';
 import SplashScreen from '../screens/SplashScreen';
 import onBoardingScreen from '../screens/onBoardingScreen';
-import Login from '../screens/LoginScreen';
+import LoginStack from './LoginStck';
 
 
 
@@ -14,7 +14,7 @@ export type AuthStackParamList = {
     HomeScreen: undefined
     SplashScreen: undefined
     onBoardingScreen:undefined
-    Login:undefined
+    LoginStack:undefined
 
 }
 
@@ -22,15 +22,12 @@ export type AuthStackParamList = {
 const { Navigator, Screen } = createStackNavigator<AuthStackParamList>();
 
 const AppNavigator = () => (
-    <Navigator screenOptions={{ headerShown: false }}>
+    <Navigator screenOptions={{ headerShown: false ,}} >
 
-        <Screen name='SplashScreen' component={SplashScreen} />
-        <Screen name='onBoardingScreen' component={onBoardingScreen} />
-        <Screen name='Login' component={Login} />
-
-
-
-        <Screen name='HomeScreen' component={HomeScreen} />
+        <Screen name='SplashScreen' component={SplashScreen} />      
+        <Screen name='onBoardingScreen' component={onBoardingScreen} />  
+        <Screen name='LoginStack' component={LoginStack} />       
+        <Screen name='HomeScreen' component={HomeScreen} />  
 
 
 

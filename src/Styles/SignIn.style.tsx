@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/native'
 import { heightPercentageToDP as hp, widthPercentageToDP as wp } from 'react-native-responsive-screen'
 import { colors } from '../config/Colors'
 
@@ -9,9 +9,9 @@ color: ${colors.black};
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 700;
-font-size: 30px;
+font-size: 28px;
 margin-left: ${wp('5%')};
-margin-top: ${hp('2%')};
+margin-top: ${hp('2%')};         
 letter-spacing: 0.5px;
 
 
@@ -24,12 +24,11 @@ font-weight: 400;
 font-size: 14px;
 color: ${colors.lightColor};
 margin-left: ${wp('5%')};
-margin-top: ${hp('3%')};
 letter-spacing: 0.8px;
 
 `
 export const Info = styled.Text`
-font-family: 'Poppins';
+font-family: 'Poppins';     
 font-style: normal;
 font-weight: 400;
 font-size: 16px;
@@ -41,5 +40,18 @@ text-align: center;
 
 
 `
+export const Desc = styled.Text`
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+margin-right: ${wp('5%')};
+color: ${colors.lightColor};
+line-height: ${hp('3.5%')};
+margin-top: ${hp('2%')};
+
+
+`
+
 
 

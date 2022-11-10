@@ -8,15 +8,14 @@ import { AuthStackParamList } from "../navigation/AppNavigator";
 type Authtype = StackNavigationProp<AuthStackParamList, "HomeScreen">
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from '@react-navigation/stack';
-import LinearGradient from 'react-native-linear-gradient';
-import { colors } from "../config/Colors";
 import Images from "../assets/Images";
-import fonts from "../constants/fonts";
 
 const SocialLogin :FC =() => {
+    const navigation = useNavigation<Authtype>();
+
     return(
-        <View style={{flexDirection:'row',justifyContent:'space-around',padding:wp('8%')}}>
-           <TouchableOpacity>
+        <View style={{flexDirection:'row',justifyContent:'space-around',padding:wp('8%'),marginBottom:hp('-8%')}}>
+           <TouchableOpacity onPress={() => navigation.navigate('EmailLogin')}>
             <View style={[styles.back,styles.elevation]}>
                 <Image source={Images.Mail}/>
             </View>
@@ -30,7 +29,7 @@ const SocialLogin :FC =() => {
             <TouchableOpacity>
 
              <View style={[styles.back,styles.elevation]}>
-                <Image source={Images.Apple}/>
+                <Image source={Images.Apple} style={{resizeMode:'contain'}}/>
             </View>
             </TouchableOpacity>
         </View>
@@ -44,7 +43,7 @@ const styles =StyleSheet.create({
         alignItems:'center',
         borderRadius:10,
         width:wp('16%'),
-        height:hp('8%')
+        height:hp('7.5%')
     },
     elevation: {
         elevation: 1,

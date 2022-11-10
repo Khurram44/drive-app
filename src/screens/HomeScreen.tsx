@@ -223,8 +223,8 @@ const styles = StyleSheet.create({
     fontSize:14,
     color:colors.black,               
     width:wp('20%'),
-    fontFamily:fonts.POPPINS_MEDIUM
-
+    fontFamily:fonts.POPPINS_MEDIUM   
+       
   },
   elevation: {
     elevation: 1,
@@ -234,8 +234,8 @@ left:{
   marginHorizontal:wp('5%'),
   fontSize:15,
   color:colors.black,
-  fontFamily:fonts.POPPINS_MEDIUM
-},
+  fontFamily:fonts.POPPINS_MEDIUM     
+},      
 rideback:{
   backgroundColor:'#F4F4F4',
   padding:wp('2%'),
@@ -256,17 +256,17 @@ from:{
   color:colors.lightColor,
   fontSize:14,
   marginHorizontal:wp('3%'),
-  fontFamily:fonts.POPPINS_LIGHT
-},
+  fontFamily:fonts.POPPINS_LIGHT    
+},                  
 rides:{
   color:colors.lightColor,
-  fontSize:13,
+  fontSize:13,                        
   fontFamily:fonts.POPPINS_MEDIUM
 
 },
 time:{
   position:'absolute',
-  right:5,
+  right:5,               
   color:colors.lightColor,
   fontSize:12,
   fontFamily:fonts.POPPINS_LIGHT

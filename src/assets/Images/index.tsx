@@ -20,6 +20,8 @@ export default {
     Mail: require('../../assets/Images/mail.png'),
     Fb: require('../../assets/Images/facebook.png'),
     Apple: require('../../assets/Images/apple.png'),
+    Check: require('../../assets/Images/check.png'),
+
 
 
 

@@ -14,8 +14,7 @@ const App : FC = () => {
 
   return (
       <NavigationContainer>
-       
-          <AppNavigator />
+        <AppNavigator />
       </NavigationContainer>
   );
 };

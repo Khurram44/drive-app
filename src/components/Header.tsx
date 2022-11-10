@@ -4,8 +4,8 @@ import {
     widthPercentageToDP as wp,
     heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
-import AntDesign from 'react-native-vector-icons/AntDesign'
-import fonts from "../constants/fonts";
+import Entypo from 'react-native-vector-icons/Entypo'
+import fonts from "../constants/fonts";    
 
 
 interface Props {
@@ -17,11 +17,11 @@ interface Props {
 const Header: FC<Props> = (props) => {
     return (
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', padding: wp('4%'), marginTop: hp('0%') }}>
-                <TouchableOpacity onPress={props.onPress}>
+                <TouchableOpacity onPress={props.onPress}>   
                     <View style={styles.backicon}>
-                        <AntDesign name="left" color={"#000000"} size={20} style={{ alignSelf: 'center' }} />
+                    <Entypo name="chevron-left" color={"#043016"} size={22} style={{ alignSelf: 'center' }} />
                     </View>
-                </TouchableOpacity>
+                </TouchableOpacity>     
                 <View style={{ alignSelf: 'center' }}>
                     <Text style={styles.texta}>{props.title}</Text>
                 </View>
@@ -33,7 +33,7 @@ export default Header;
 const styles = StyleSheet.create({
     backicon: {
         width: wp('12%'),
-        height: hp('6%'),
+        height: hp('5.8%'),    
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 15,

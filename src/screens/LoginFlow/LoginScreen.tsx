@@ -1,24 +1,24 @@
 import React, { FC, useState } from "react";
-import { View, Text, StyleSheet, Image, ImageBackground, TouchableOpacity, TextInput } from "react-native";
+import { View, Text, StyleSheet, Image, ImageBackground, TouchableOpacity, TextInput, ScrollView } from "react-native";
 import {
     widthPercentageToDP as wp,
     heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
-import { AuthStackParamList } from "../navigation/AppNavigator";
+import { AuthStackParamList } from "../../navigation/AppNavigator";
 type Authtype = StackNavigationProp<AuthStackParamList, "HomeScreen">
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from '@react-navigation/stack';
 import LinearGradient from 'react-native-linear-gradient';
-import { colors } from "../config/Colors";
-import Images from "../assets/Images";
-import fonts from "../constants/fonts";
+import { colors } from "../../config/Colors";
+import Images from "../../assets/Images";
+import fonts from "../../constants/fonts";
 import Entypo from 'react-native-vector-icons/Entypo'
-import { Heading, Info, Subheading } from "../Styles/SignIn.style";
+import { Heading, Info, Subheading } from "../../Styles/SignIn.style";
 import { CountryPicker } from "react-native-country-codes-picker";
 import { Formik } from "formik";
 import * as Yup from "yup";
-import Button from "../components/Button";
-import SocialLogin from "../components/SocialLogin";
+import Button from "../../components/Button";
+import SocialLogin from "../../components/SocialLogin";
 
 const validationSchema = Yup.object().shape({
 
@@ -35,6 +35,9 @@ const Login: FC = () => {
         <LinearGradient colors={['#e5d5b8', '#d4e4f0']} start={{ x: -1, y: 0 }}
             end={{ x: 1, y: 0 }} locations={[0.0, 1.0]} style={styles.container}>
             <Image source={Images.LogoOne} style={styles.logo} />
+            <ScrollView 
+            showsVerticalScrollIndicator={false}
+            >
             <Heading>Login</Heading>
             <Formik
                 initialValues={{
@@ -44,7 +47,7 @@ const Login: FC = () => {
                 }}
                 onSubmit={(values) => {
 
-                    // navigation.navigate("Bottomtab")
+                    navigation.navigate("VerifyLogin")
 
 
 
@@ -54,7 +57,9 @@ const Login: FC = () => {
             >
                 {({ handleSubmit, values, errors, touched, handleChange }) => (
                     <>
+                          <View style={{marginTop:hp('3%')}}>
                         <Subheading>Mobile number</Subheading>
+                        </View>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginTop: hp('2%') }}>
                             <TouchableOpacity
                                 onPress={() => setShow(true)}
@@ -109,9 +114,9 @@ const Login: FC = () => {
                     </>
                 )}
             </Formik>
-            <Info>Login with</Info>
-            <SocialLogin/>
-            <ImageBackground source={Images.BottomL} style={{width:wp('100%'),height:hp('40%'),marginTop:hp('-10%')}}  imageStyle={{bottom:0,position:'absolute'}}>
+            <Info>Login with</Info>     
+            <SocialLogin/>       
+            <ImageBackground source={Images.BottomL} style={{width:wp('100%'),height:hp('40%')}}  imageStyle={{bottom:0,position:'absolute'}}>
                 <View style={{bottom:30,position:'absolute',alignSelf:'center'}}>
                 <View style={{flexDirection:'row'}}>
                 <Text style={styles.desc}>Don’t have an account?</Text>
@@ -122,7 +127,7 @@ const Login: FC = () => {
                 </View>
                 </View>
             </ImageBackground>
-           
+            </ScrollView>
         </LinearGradient>
     )
 }
@@ -139,7 +144,7 @@ const styles = StyleSheet.create({
     backdrop: {
         width:wp('32%'),
         backgroundColor: '#fff',
-        padding: wp('5%'),
+        padding: wp('4%'),
         borderRadius: 10,
         alignSelf: 'center',
 
@@ -151,16 +156,16 @@ const styles = StyleSheet.create({
     input: {
         backgroundColor: '#fff',
         width: wp('55%'),
-        padding: wp('5%'),
+        padding: wp('4%'),
         alignSelf: 'center',
         borderRadius: 10,
         fontFamily: fonts.POPPINS_MEDIUM,
-        paddingBottom: hp("1.5%"),
+        paddingBottom: hp("1%"),
       
     },
     desc:{
         color:'#fff',
-        fontSize:15,
+        fontSize:14,
         fontFamily:fonts.POPPINS_REGULAR,
         alignSelf:'center'
 
@@ -168,7 +173,7 @@ const styles = StyleSheet.create({
     },
     reg:{
         color:'#fff',
-        fontSize:15,
+        fontSize:14,
         fontFamily:fonts.POPPINS_SEMI_BOLD,
 alignSelf:'center',
 marginHorizontal:wp('1%')
