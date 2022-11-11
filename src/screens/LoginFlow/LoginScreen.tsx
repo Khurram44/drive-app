@@ -105,27 +105,27 @@ const Login: FC = () => {
                                 setCountryFlag(item.flag);
 
 
-                                setShow(false);
-                            }}
+                                setShow(false);     
+                            }}                  
 
                         />
-                        <Button title="login" onPress={handleSubmit}/>
+                        <Button title="login" onPress={handleSubmit}/>       
 
                     </>
                 )}
-            </Formik>
+            </Formik>  
             <Info>Login with</Info>     
             <SocialLogin/>       
             <ImageBackground source={Images.BottomL} style={{width:wp('100%'),height:hp('40%')}}  imageStyle={{bottom:0,position:'absolute'}}>
                 <View style={{bottom:30,position:'absolute',alignSelf:'center'}}>
                 <View style={{flexDirection:'row'}}>
-                <Text style={styles.desc}>Don’t have an account?</Text>
+                <Text style={styles.desc}>Don’t have an account?</Text>     
 
-                <TouchableOpacity >
-                <Text style={styles.reg}>Register Now</Text>
-                </TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Register')}>   
+                <Text style={styles.reg}>Register Now</Text>    
+                </TouchableOpacity>         
                 </View>
-                </View>
+                </View>       
             </ImageBackground>
             </ScrollView>
         </LinearGradient>
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
         flex: 1
     },
     logo: {
-        marginTop: hp('5%'),
+        marginTop: hp('5%'),    
         marginHorizontal: wp('5%')
     },
     backdrop: {

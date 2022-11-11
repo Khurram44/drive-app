@@ -16,7 +16,7 @@ const CELL_COUNT = 6;
 const OtpCodePassword: FC = () => {
   
          
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState('');                
   const ref = useBlurOnFulfill({value, cellCount: CELL_COUNT});
   const [props, getCellOnLayoutHandler] = useClearByFocusCell({
     value,
@@ -39,10 +39,9 @@ const OtpCodePassword: FC = () => {
         textContentType="oneTimeCode"
         renderCell={({index, symbol, isFocused}) => (
           <View
-            // Make sure that you pass onLayout={getCellOnLayoutHandler(index)} prop to root component of "Cell"
-            onLayout={getCellOnLayoutHandler(index)}
+             onLayout={getCellOnLayoutHandler(index)}          
             key={index}           
-            style={[styles.cellRoot, isFocused && styles.focusCell]}>
+            style={[styles.cellRoot, isFocused && styles.focusCell]}>        
             <Text style={styles.cellText}>      
               {symbol || (isFocused ? <Cursor /> : null)}
             </Text>

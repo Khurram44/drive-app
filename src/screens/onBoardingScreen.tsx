@@ -93,7 +93,7 @@ const onBoardingScreen: FC = () => {
                                 <View style={styles.back} />
                             }
 
-                            {state === '1' ?
+                            {state === '1' ?   
                                 <View style={styles.backnew} />
 
                                 :
@@ -230,7 +230,7 @@ const onBoardingScreen: FC = () => {
                             }
 
                         </View>
-                        <TouchableOpacity onPress={() => navigation.navigate('LoginStack')}>
+                        <TouchableOpacity onPress={() => navigation.navigate('LoginStack')}> 
                         <Image source={Images.Circle} style={styles.circle}/>  
                         </TouchableOpacity>    
                     </View>

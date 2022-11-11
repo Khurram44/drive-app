@@ -27,8 +27,8 @@ const validationSchema = Yup.object().shape({
     password: Yup.string().required('Password is Required'),
 
 })
-const EmailLogin: FC = () => {
-    const navigation = useNavigation<Authtype>();
+const EmailLogin: FC = () => {     
+    const navigation = useNavigation<Authtype>();    
     const [isSecureEntry, setIsSecureEntry] = useState(true);
 
 
@@ -45,9 +45,9 @@ const EmailLogin: FC = () => {
                 <Formik
                     initialValues={{
                         email: "",
-                        password: ""
+                        password: ""    
 
-
+                          
                     }}
                     onSubmit={(values) => {
 
@@ -55,12 +55,12 @@ const EmailLogin: FC = () => {
 
 
 
-                    }}
+                    }}   
 
                     validationSchema={validationSchema}
-                >
+                >    
                     {({ handleSubmit, values, errors, touched, handleChange }) => (
-                        <>
+                        <>   
                             <View style={{ marginTop: hp('2%') }}>
                                 <Subheading>Email address</Subheading>
                                 <TextInput
@@ -114,23 +114,23 @@ const EmailLogin: FC = () => {
 
                             <Button title="login" onPress={handleSubmit} />
 
-                        </>
+                        </>     
                     )}
                 </Formik>
                 <TouchableOpacity onPress={() => navigation.navigate('ForgotPassword')}>
                     <Text style={styles.forget}>Forgot password?</Text>
                 </TouchableOpacity>
-                <Info>Login with</Info>
+                <Info>Login with</Info>   
                 <SocialLogin />
                 <ImageBackground source={Images.BottomL} style={{ width: wp('100%'), height: hp('40%'), marginTop: hp('-1%') }} imageStyle={{ bottom: 0, position: 'absolute' }}>
                     <View style={{ bottom: 30, position: 'absolute', alignSelf: 'center' }}>
                         <View style={{ flexDirection: 'row' }}>  
                             <Text style={styles.desc}>Don’t have an account?</Text>
 
-                            <TouchableOpacity >      
+                            <TouchableOpacity onPress={() => navigation.navigate("Register")}>      
                                 <Text style={styles.reg}>Register Now</Text>
                             </TouchableOpacity>  
-                        </View>
+                        </View>  
                     </View>
                 </ImageBackground>
             </ScrollView>

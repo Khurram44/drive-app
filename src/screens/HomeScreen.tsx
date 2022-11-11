@@ -223,9 +223,9 @@ const styles = StyleSheet.create({
     fontSize:14,
     color:colors.black,               
     width:wp('20%'),
-    fontFamily:fonts.POPPINS_MEDIUM   
+    fontFamily:fonts.POPPINS_MEDIUM       
        
-  },
+  },        
   elevation: {
     elevation: 1,
     shadowColor: '#F4F4F4',
@@ -235,9 +235,9 @@ left:{
   fontSize:15,
   color:colors.black,
   fontFamily:fonts.POPPINS_MEDIUM     
-},      
+},          
 rideback:{
-  backgroundColor:'#F4F4F4',
+  backgroundColor:'#F4F4F4',            
   padding:wp('2%'),
   borderRadius:12,
   width:wp('20%'),

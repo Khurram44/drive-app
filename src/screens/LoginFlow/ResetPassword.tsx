@@ -24,13 +24,13 @@ import OtpCodePassword from "../../components/OtpPassword";
 
 
 const validationSchema = Yup.object().shape({
-    password: Yup.string().required("Password is Required"),
+    password: Yup.string().required("Password is Required"),        
     confirmpass: Yup.string().required("Confirm Password is Required").oneOf([Yup.ref('password'), null], 'Passwords must match'),
 })
 const ResetPassword: FC = () => {
-    const navigation = useNavigation<Authtype>();
-    const [isSecureEntry, setIsSecureEntry] = useState(true);
-    const [isSecureEntry1, setIsSecureEntry1] = useState(true);    
+    const navigation = useNavigation<Authtype>();       
+    const [isSecureEntry, setIsSecureEntry] = useState(true);    
+    const [isSecureEntry1, setIsSecureEntry1] = useState(true);        
 
 
 
@@ -38,19 +38,19 @@ const ResetPassword: FC = () => {
     return (
         <LinearGradient colors={['#e5d5b8', '#d4e4f0']} start={{ x: -1, y: 0 }}
             end={{ x: 1, y: 0 }} locations={[0.0, 1.0]} style={styles.container}>
-            <SimpleHeader onPress={() => navigation.goBack()} />
+            <SimpleHeader onPress={() => navigation.goBack()} />      
             <View style={{ bottom: 0, position: 'absolute' }}>
                 <ImageBackground source={Images.Bottom} style={{ width: wp('100%'), height: hp('40%') }} />
-            </View>
-            <Heading>Reset Password</Heading>
-            <View style={{ marginHorizontal: wp('5%') }}>
+            </View>      
+            <Heading>Reset Password</Heading>   
+            <View style={{ marginHorizontal: wp('5%') }}>  
                 <Desc>A six digit code has been sent your email address.</Desc>
-            </View>
+            </View>      
             <Formik
                 initialValues={{
                     password: "",
                     confirmpass: ""
-
+                                         
 
                 }}
                 onSubmit={(values) => {

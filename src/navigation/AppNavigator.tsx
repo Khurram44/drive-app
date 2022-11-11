@@ -4,6 +4,7 @@ import HomeScreen from '../screens/HomeScreen';
 import SplashScreen from '../screens/SplashScreen';
 import onBoardingScreen from '../screens/onBoardingScreen';
 import LoginStack from './LoginStck';
+import Register from '../screens/RegisterFlow/Register';
 
 
 
@@ -15,6 +16,7 @@ export type AuthStackParamList = {
     SplashScreen: undefined
     onBoardingScreen:undefined
     LoginStack:undefined
+    Register:undefined
 
 }
 
@@ -26,9 +28,11 @@ const AppNavigator = () => (
 
         <Screen name='SplashScreen' component={SplashScreen} />      
         <Screen name='onBoardingScreen' component={onBoardingScreen} />  
-        <Screen name='LoginStack' component={LoginStack} />       
+        <Screen name='LoginStack' component={LoginStack} />  
+        <Screen name='Register' component={Register} />  
+                
         <Screen name='HomeScreen' component={HomeScreen} />  
-
+                   
 
 
     </Navigator>

@@ -52,6 +52,20 @@ margin-top: ${hp('2%')};
 
 
 `
+export const Remember = styled.Text`
+font-family: 'Poppins-Regular';
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+
+color: #5F5F5F;
+flex-shrink: 1;
+align-self: center;  
+width: ${wp('80%')};
+
+
+color: ${colors.black};
+`
 
 
 
